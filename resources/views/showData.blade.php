@@ -15,6 +15,13 @@
 <body class="flex flex-col items-center justify-center">
     <h1>Product List</h1>
     <a href="api/addProduct">Add Product</a>
+    <form action="" method="get">
+        <input 
+        type="text" 
+        name="search" id="" 
+        placeholder="search by name" 
+        class="w-full bg-transparent rounded-pill border border-3 border-warning border-indigo-500/100  rounded px-3 placeholder:text-sm text-black cursor-text">
+    </form>
     <section class="flex items-center justify-center p-4 box-content h-auto w-75  ">
         <table class="table table-dark table-striped   " >
             <thead>
