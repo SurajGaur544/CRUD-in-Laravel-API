@@ -8,8 +8,14 @@ use App\Models\product;
 
 class ProductController extends Controller
 {
-    function getData($id=null){
-        $data = $id ? product::find($id) : product::all();
+    function getData(Request $req){
+        $search = $req['search'] ?? "";
+        if($search != ""){
+            $data = product::where('name','=',$search)->get();
+        }
+        else{
+           $data =  product::all();  //  $id ? product::find($id) :
+        }
         return view('showData',['collection'=>$data]);
     }
 
@@ -58,6 +64,8 @@ class ProductController extends Controller
     }
 
     function search($name){
-        return product::where('name',"like","%".$name."%")->get();
+        $data = product::where('name',"like","%".$name."%")->get();
+        return view('api/getData',['data' => $data]);
+
     }
 }

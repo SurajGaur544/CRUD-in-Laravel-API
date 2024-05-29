@@ -11,3 +11,5 @@ Route::get('getData',[ProductController::class,'getData']);
 Route::get('delete/{id}',[ProductController::class,'delete']);
 Route::post('/editData',[ProductController::class,'editData']);
 Route::get('update/{id}',[ProductController::class,'update']);
+Route::get('search',[ProductController::class,'search']);
+
