@@ -17,4 +17,4 @@ Route::view('addProduct','addProduct');
 Route::POST('postData',[ProductController::class,'postData']);
 Route::PUT('edit',[ProductController::class,'dataEdit']);
 Route::GET('delete/{id}',[ProductController::class,'delete']);
-Route::GET('search/{name}',[ProductController::class,'search']);   
+Route::GET('search/{name}',[ProductController::class,'search']);
